@@ -20,7 +20,7 @@ async function getMoives(url) {
 function showMovies(movies) { //movies는 API에서 가져온 모든 데이터
     main.innerHTML = "";
 
-    movies.forEach((movie) => { //movie는 우리가 필요한 정보
+    movies.forEach((movie) => {
         const { title, poster_path, vote_average, overview } = movie;
 
         const movieEl = document.createElement("div");
@@ -99,22 +99,22 @@ const closeBtn = document.querySelector('.btn--close-pop');
 const openBtn = document.querySelector('.btn');
 const modalForm = document.querySelector(".modal__form");
 
-const openPop = function(e) {
+const openPop = function (e) {
     e.preventDefault();
     pop.classList.remove('clear');
     back.classList.remove('clear');
 };
 
-const closePop = function() {
+const closePop = function () {
     pop.classList.add('clear');
     back.classList.add('clear');
 }
-const resetForm = function() {
+const resetForm = function () {
     modalForm.reset();
 }
 openBtn.addEventListener('click', openPop);
 openBtn.addEventListener('click', closeModal);
-openBtn.addEventListener('click', resetForm );
+openBtn.addEventListener('click', resetForm);
 
 
 closeBtn.addEventListener('click', closePop);
@@ -124,3 +124,39 @@ document.addEventListener('keydown', function (e) {
         closePop();
     }
 });
+
+/////////////////////로그인 조건
+// const fn = document.getElementById("fn");
+// const ln = document.getElementById("ln");
+// const em = document.getElementById("mail");
+
+// const loginBtn = document.getElementsByClass("btn");
+
+// const isActiveLogin = () => {
+//     let fnValue = fn.value;
+//     let lnValue = ln.value;
+//     let emValue = em.value;
+
+//     if (
+//         (fnValue && lnValue) && (emValue.includes("@"))
+//     ) {
+//         loginBtn.disabled = false;
+//         loginBtn.style.opacity = 1;
+//         loginBtn.style.cursor = "pointer";
+//     }
+//     else {
+//         loginBtn.disabled = true;
+//         loginBtn.style.opacity = .3;
+//     }
+// }
+// const init = () => {
+//     fn.addEventListener("input", isActiveLogin);
+//     ln.addEventListener("input", isActiveLogin);
+//     em.addEventListener("input", isActiveLogin);
+//     fn.addEventListener("keyup", isActiveLogin);
+//     ln.addEventListener("keyup", isActiveLogin);
+//     em.addEventListener("keyup", isActiveLogin);
+// }
+// init();
+//확인하기
+

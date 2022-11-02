@@ -43,6 +43,7 @@ header {
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .movie {
@@ -109,7 +110,6 @@ main {
 
 .btn {
     display: inline-block;
-    background-color: var(--color-primary);
     font-size: 1.3rem;
     font-family: inherit;
     font-weight: 500;
@@ -118,6 +118,11 @@ main {
     border-radius: 10rem;
     cursor: pointer;
     transition: all 0.3s;
+    grid-column: 1 / span 2;
+    justify-self: center;
+    margin-top: 1rem;
+    background-color: #7378c5;
+    color: white;
 }
 
 .account_btn {
@@ -183,6 +188,7 @@ main {
     gap: 2.5rem;
 }
 
+
 .modal__form label {
     font-size: 1rem;
     font-weight: 500;
@@ -195,14 +201,9 @@ main {
     border-radius: 0.5rem;
 }
 
-.modal__form button {
-    grid-column: 1 / span 2;
-    justify-self: center;
-    margin-top: 1rem;
-    background-color: #7378c5;
-    color: white;
 
-}
+
+
 
 .btn--close-modal {
     font-family: inherit;
@@ -220,6 +221,7 @@ main {
     visibility: hidden;
     opacity: 0;
 }
+
 /* pop */
 .pop {
     position: fixed;
