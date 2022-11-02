@@ -126,37 +126,37 @@ document.addEventListener('keydown', function (e) {
 });
 
 /////////////////////로그인 조건
-// const fn = document.getElementById("fn");
-// const ln = document.getElementById("ln");
-// const em = document.getElementById("mail");
+const fn = document.querySelector("#fn");
+const ln = document.querySelector("#ln");
+const em = document.querySelector("#mail");
 
-// const loginBtn = document.getElementsByClass("btn");
 
-// const isActiveLogin = () => {
-//     let fnValue = fn.value;
-//     let lnValue = ln.value;
-//     let emValue = em.value;
+const isActiveLogin = () => {
+    let fnValue = fn.value;
+    let lnValue = ln.value;
+    let emValue = em.value;
 
-//     if (
-//         (fnValue && lnValue) && (emValue.includes("@"))
-//     ) {
-//         loginBtn.disabled = false;
-//         loginBtn.style.opacity = 1;
-//         loginBtn.style.cursor = "pointer";
-//     }
-//     else {
-//         loginBtn.disabled = true;
-//         loginBtn.style.opacity = .3;
-//     }
-// }
-// const init = () => {
-//     fn.addEventListener("input", isActiveLogin);
-//     ln.addEventListener("input", isActiveLogin);
-//     em.addEventListener("input", isActiveLogin);
-//     fn.addEventListener("keyup", isActiveLogin);
-//     ln.addEventListener("keyup", isActiveLogin);
-//     em.addEventListener("keyup", isActiveLogin);
-// }
-// init();
-//확인하기
+    if (
+        (fnValue && lnValue) && (emValue.includes("@"))
+    ) {
+        openBtn.disabled = false;
+        openBtn.style.opacity = 1;
+        openBtn.style.cursor = "pointer";
+    }
+    else {
+        openBtn.style.opacity = .3;
+        openBtn.disabled = true;
+
+    }
+}
+const init = () => {
+    fn.addEventListener("input", isActiveLogin);
+    ln.addEventListener("input", isActiveLogin);
+    em.addEventListener("input", isActiveLogin);
+    fn.addEventListener("keyup", isActiveLogin);
+    ln.addEventListener("keyup", isActiveLogin);
+    em.addEventListener("keyup", isActiveLogin);
+}
+init();
+
 
