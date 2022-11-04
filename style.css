@@ -116,7 +116,6 @@ main {
     border: none;
     padding: 1.25rem 4.5rem;
     border-radius: 10rem;
-    cursor: pointer;
     transition: all 0.3s;
     grid-column: 1 / span 2;
     justify-self: center;
