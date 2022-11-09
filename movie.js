@@ -9,15 +9,15 @@ const search = document.getElementById("search");
 getMoives(API_URL);
 
 async function getMoives(url) {
-    const res = await fetch(url); //fetch 데이터를 전송받기 위해 불러오는 메서드
-    const data = await res.json(); //json형태로 신호를 보낼때 쓰는 메서드
-    //HTTP서버 전송 후 response를 반환하고 json형식으로 응답을 전송
+    const res = await fetch(url);
+    const data = await res.json();
 
-    // console.log(data.results);
+
+
     showMovies(data.results);
 }
 
-function showMovies(movies) { //movies는 API에서 가져온 모든 데이터
+function showMovies(movies) {
     main.innerHTML = "";
 
     movies.forEach((movie) => {

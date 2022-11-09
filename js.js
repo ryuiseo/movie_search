@@ -28,8 +28,7 @@
 // }
 // startAsyncJobs();
 
-//ex2. 
-//합친 시간만큼 기다려야 값이 나옴. 6초
+
 // async function foo() {
 //     const a = await new Promise((resolve)=> setTimeout(()=> resolve(1),3000));
 //     const b = await new Promise((resolve)=> setTimeout(()=> resolve(2),2000));
@@ -39,7 +38,7 @@
 // }
 // foo();
 
-//한번에 수행되게 하는것 Promise.all 3초
+
 async function foo() {
     const res = await Promise.all([
         new Promise((resolve) => setTimeout(() => resolve(1), 3000)),
